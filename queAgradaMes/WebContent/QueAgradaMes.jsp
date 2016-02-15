@@ -10,10 +10,10 @@
 	<h1>Que us agrada més?</h1>
 	<form action="Agrada" method="post">
 	
-		<input type="radio" name ="beguda" value="cerveza">Cerveza</input>
-		<input type="radio" name ="beguda" value="cafe">Cafè</input>
-		<input type="radio" name ="beguda" value="vi">Vi</input>
-		<input type="radio" name ="beguda" value="carajilli">"Carajillo"</input>
+		<input type="radio" name="beguda" value="cerveza">Cerveza</input>
+		<input type="radio" name="beguda" value="cafe">Cafè</input>
+		<input type="radio" name="beguda" value="vi">Vi</input>
+		<input type="radio" name="beguda" value="carajillo">"Carajillo"</input>
 		<input type="submit" value="Vota!">	
 	</form>
 	

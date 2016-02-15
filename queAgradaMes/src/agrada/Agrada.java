@@ -31,7 +31,9 @@ public class Agrada extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 		// context crear array o mapa con las bebidas
-		int[] array = new int[5]; 
+		// Xavi dice cambiar int por integer, pero error porque array todo null
+		int[] array = new int[4]; 
+		getServletContext().setAttribute("resultats", array);
 	}
 
 	/**
@@ -48,9 +50,31 @@ public class Agrada extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.sendRedirect("http://www.google.com");
+		
+		String beguda = request.getParameter("beguda");
+		int[] array  = (int[]) getServletContext().getAttribute("resultats");		
+		
+		if(beguda.equals("cerveza")){
+			array[0] += 1;
+		}else if(beguda.equals("cafe")){
+			array[1] += 1;
+		}else if(beguda.equals("vi")){
+			array[2] += 1;
+		}else if(beguda.equals("carajillo")){
+			array[3] += 1;
+		}
+		
+		getServletContext().setAttribute("resultats", array);
+		
+//		int begudaTriada = getServlet(array[1]);
+//		begudaTriada += 1;
+//		array[1].setServlet(begudaTriada);
+//		
+//		response.sendRedirect("http://www.google.com");
 		// recojer el array o mapa de bebidas con getservlet(posicion del array o mapa) sumar +1
 		// devolver el array o mapa con setservlet()
+		
+		
 		
 	}
 
