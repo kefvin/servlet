@@ -1,6 +1,8 @@
 package agrada;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -29,11 +31,13 @@ public class Agrada extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
 		// TODO Auto-generated method stub
 		// context crear array o mapa con las bebidas
 		// Xavi dice cambiar int por integer, pero error porque array todo null
-		int[] array = new int[4]; 
-		getServletContext().setAttribute("resultats", array);
+		int[] array ={0,0,0,0}; 
+		
+		getServletContext().setAttribute("resultats", array); 
 	}
 
 	/**
@@ -64,15 +68,11 @@ public class Agrada extends HttpServlet {
 			array[3] += 1;
 		}
 		
+		
+		
 		getServletContext().setAttribute("resultats", array);
 		
-//		int begudaTriada = getServlet(array[1]);
-//		begudaTriada += 1;
-//		array[1].setServlet(begudaTriada);
-//		
-//		response.sendRedirect("http://www.google.com");
-		// recojer el array o mapa de bebidas con getservlet(posicion del array o mapa) sumar +1
-		// devolver el array o mapa con setservlet()
+		response.sendRedirect("");
 		
 		
 		
