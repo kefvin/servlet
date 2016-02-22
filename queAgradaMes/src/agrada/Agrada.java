@@ -72,7 +72,7 @@ public class Agrada extends HttpServlet {
 		
 		getServletContext().setAttribute("resultats", array);
 		
-		response.sendRedirect("");
+		response.sendRedirect("Resultat");
 		
 		
 		
